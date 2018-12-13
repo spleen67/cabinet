@@ -1,0 +1,6 @@
+- @docs.each do |doc|
+  %h2= link_to doc.title, doc
+  %p= time_ago_in_words(doc.created_at) #permet de recuperer le timestamp de creation dans la base
+  %p= doc.content
+  
+= link_to "Création d'un livre ", new_doc_path 
