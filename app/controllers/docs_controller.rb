@@ -10,11 +10,11 @@ class DocsController < ApplicationController
   end
 
   def new
-    @doc = Doc.new
+    @doc = current_user.docs.build #Doc.new
   end
 
   def create
-    @doc =  Doc.create(doc_params)
+    @doc = current_user.docs.build(doc_params) #Doc.create(doc_params)
    if @doc.save
     redirect_to @doc
    else
