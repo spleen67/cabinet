@@ -3,7 +3,7 @@ class DocsController < ApplicationController
 
   def index
     #@doc = Doc.all.order("created_at DESC")
-    @docs = Doc.all
+    @docs = Doc.all.order(updated_at: :desc)
   end
 
   def show
