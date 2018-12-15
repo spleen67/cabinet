@@ -1,2 +1,18 @@
-%h1 Welcome c'est la home page 
+#banner
+  .banner_content 
+    %h1 File Cabinet 
+    %p Votre travail, Organisation, tous les jours
+    %button= link_to "Entrer", new_user_registration_path 
 
+#callouts
+  .callout_inner
+    .wrapper
+      .callout
+        %h2 Organisation
+        %p Curabitur eu imperdiet lacus. Praesent leo ipsum, condimentum sit amet sapien eu, dignissim varius nibh. Cras sollicitudin dolor leo, in ornare lectus iaculis eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam luctus massa augue, in suscipit elit cursus eget. Aenean ipsum orci, finibus vel lacinia ac, facilisis non neque. Nunc ut finibus elit. Nam tincidunt ut velit a fermentum. Vivamus dictum volutpat egestas. Etiam vitae eros eu ligula hendrerit ultrices. Nunc ornare non sapien sit amet auctor. Phasellus et volutpat tellus. Maecenas eu viverra nibh.
+
+#bottom_cta
+  .wrapper
+    %h2 Go !!
+    %br
+    %button= link_to "Rejoindre Maintenant", new_user_registration_path
