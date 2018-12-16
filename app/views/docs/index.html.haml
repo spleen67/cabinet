@@ -1,8 +1,13 @@
-%h1 Ma Home Page
-
-- @docs.each do |doc|
-  %h2= link_to doc.title, doc
-  %p= time_ago_in_words(doc.created_at) #permet de recuperer le timestamp de creation dans la base
-  %p= truncate(doc.content){ link_to "Continue", "#" }
-  
-= link_to "Création d'un livre ", new_doc_path 
+.wrapper_with_padding 
+  #doc.clearfix
+    - unless @doc.blank?
+      - @docs.each do |doc|
+        %a{href: (url_for [doc])}
+          .doc
+            %p.title= link_to doc.title, doc
+            %p.date= time_ago_in_words(doc.created_at) #permet de recuperer le timestamp de creation dans la base
+            %p.content= truncate(doc.content){ link_to "Continue", "#" }
+    - else
+      %h2 Creation du document 
+      %p debut de la creation du document   
+      %button= link_to "Création d'un livre ", new_doc_path 
