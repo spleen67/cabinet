@@ -1,4 +1,5 @@
-%h1 Modification d'un  document
+.wrapper_with_padding
+  %h1 Modification d'un  document
 
-=  render 'form'
-= link_to 'Annuler', doc_path 
+  =  render 'form'
+  %button= link_to "Annuler ",  doc_path, class: "button"
