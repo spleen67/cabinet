@@ -1,7 +1,7 @@
 .wrapper_with_padding 
-  #doc.clearfix
+  #docs.clearfix
     - unless @doc.blank?
-      - @docs.each do |doc|
+      - @doc.each do |doc|
         %a{href: (url_for [doc])}
           .doc
             %p.title= link_to doc.title, doc
@@ -10,4 +10,4 @@
     - else
       %h2 Creation du document 
       %p debut de la creation du document   
-      %button= link_to "Création d'un livre ", new_doc_path 
+      %button= link_to "Création d'un livre ", new_doc_path, class: "button" 
